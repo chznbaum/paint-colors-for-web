@@ -1,16 +1,16 @@
 import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs/Rx';
-import { Sw } from './sw';
+import { Sw } from './sw-list';
 import { SwService } from './sw.service';
 
 @Component({
   moduleId: module.id,
   selector: 'app-sw',
-  templateUrl: './sw.component.html',
-  styleUrls: [ './sw.component.scss' ],
+  templateUrl: './sw-list.component.html',
+  styleUrls: [ './sw-list.component.scss' ],
   providers: [ SwService ]
 })
-export class SwComponent implements OnInit {
+export class SwListComponent implements OnInit {
   sws: Sw[];
   errorMessage: string;
   mode = 'Observable';

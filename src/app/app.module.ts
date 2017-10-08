@@ -4,7 +4,7 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { HomepageComponent } from './homepage/homepage.component';
-import { SwComponent } from './sw/sw.component';
+import { SwListComponent } from './sw/sw-list.component';
 import { SwService } from './sw/sw.service';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -13,7 +13,7 @@ import { AppRoutingModule } from './app-routing.module';
   declarations: [
     AppComponent,
     HomepageComponent,
-    SwComponent
+    SwListComponent
   ],
   imports: [
     BrowserModule,
