@@ -1,0 +1,15 @@
+<div>
+  <h1>Sherwin Williams</h1>
+  <div *ngFor="let sw of sws">
+    <h2>{{ sw.name }} - {{ sw.colorNumber }} - {{ sw.id }}</h2>
+    <div style="height:100px;width:100px;" [style.background-color]="'#' + sw.rgb.toString(16)"></div>
+    <p>{{ sw.coordinatingColors }}</p>
+    <p>Exterior: {{ sw.isExterior }}</p>
+    <p>Interior: {{ sw.isInterior }}</p>
+    <p>{{ sw.storeStripLocator }}</p>
+    <p>{{ sw.brandedCollectionIds }}</p>
+    <p>{{ sw.colorFamilyIds }}</p>
+    <p>{{ sw.brandedCollectionNames }}</p>
+    <p>{{ sw.colorFamilyNames }}</p>
+  </div>
+</div>
