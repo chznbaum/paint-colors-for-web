@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { Http, Response, Headers, RequestOptions } from '@angular/http';
 import { Observable } from 'rxjs/Rx';
 
-import { Sw } from './sw-list';
+import { Sw } from './sw';
 
 @Injectable()
 export class SwService {
@@ -10,7 +10,7 @@ export class SwService {
   constructor(
     private http: Http
   ) {}
-  getSws(): Observable<Sw[]> {
+  getSws() {
     return this.http.get(this.swUrl)
                .map((response: Response) => <Sw[]>response.json())
                .catch(this.handleError);

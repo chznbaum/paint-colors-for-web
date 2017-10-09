@@ -1,5 +1,19 @@
+.sw-list-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
 h1 {
   text-align: center;
+}
+.search-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  .search {
+    width: 50%;
+  }
 }
 .swatch-wrapper {
   display: flex;
@@ -27,6 +41,7 @@ h1 {
     }
     .swatch-text {
       text-align: center;
+      margin: 0.25em;
       &.swatch-rgb {
         text-transform: uppercase;
       }

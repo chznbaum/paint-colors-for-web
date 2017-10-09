@@ -1,12 +1,17 @@
-<div>
+<div class="sw-list-wrapper">
   <h1>Sherwin Williams</h1>
-  <div class="swatch-wrapper">
-    <div *ngFor="let sw of sws">
-      <div class="paint-swatch">
-        <div class="paint-color" [style.background-color]="'#' + sw.rgb.toString(16)"></div>
-        <h2 class="swatch-title">{{ sw.name }}</h2>
-        <p class="swatch-text swatch-rgb">{{ '#' + sw.rgb.toString(16) }}</p>
+  <form class="search-form" (keyup)="onKey($event)">
+    <input type="search" class="search" name="search" placeholder="Paint color name">
+    <button class="form-button" id="showAll" (click)="getAll()">Show All</button>
+    <div class="swatch-wrapper">
+      <div *ngFor="let sw of sws">
+        <div class="paint-swatch">
+          <div class="paint-color" [style.background-color]="decimalToHex(sw.rgb)"></div>
+          <h2 class="swatch-title">{{ sw.name }}</h2>
+          <p class="swatch-text swatch-rgb">{{ decimalToHex(sw.rgb) }}</p>
+          <p class="swatch-text">{{ hexToRGB(decimalToHex(sw.rgb)) }}</p>
+        </div>
       </div>
     </div>
-  </div>
+  </form>
 </div>
